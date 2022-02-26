@@ -80,7 +80,6 @@ a:hover::before {
   display: grid;
   grid-template-columns: repeat(12, minmax(0, 1fr));
   grid-gap: 1.25em;
-  background: red;
 }
 
 .container__navbar {
@@ -107,55 +106,69 @@ a:hover::before {
 
 /* end general css */
 /* anything below this line is specific css */
-/* css for work.html */
-.container__work li {
+.container__page {
   display: grid;
   grid-template-columns: repeat(12, minmax(0, 1fr));
   grid-gap: 1.25em;
-  padding: 1.875em 3.125em 1.25em 3.125em;
+  padding: 1.875em 3.125em 1.875em 3.125em;
 }
-.container__work li .project-description {
-  display: none;
-}
-.container__work li .work-img {
-  grid-column: 5/13;
-  width: 100%;
-  height: auto;
-  border-radius: 7px;
-}
-.container__work li .work-img img {
-  width: 100%;
-  border-radius: 7px;
-}
-.container__work li .work-img a::before {
-  display: none;
-}
-.container__work li .work-img:hover + .project-description {
-  display: block;
-  position: absolute;
-  left: 3.125em;
-  width: 27%;
-  align-self: center;
-}
-.container__work li .work-img:hover + .project-description h1 {
+.container__page h1 {
   color: #3333FF;
 }
-.container__work li .work-img:hover + .project-description h1.paragraph {
-  color: #000000;
+.container__page .page-title {
+  grid-column: 7/13;
 }
-
-/* end css for work.html
-
-/* css for about.html */
-.container__about {
+.container__page .banner-image {
+  grid-column: 1/13;
+}
+.container__page .banner-image img {
+  width: 100%;
+  border-radius: 7px;
+}
+.container__page .page-description {
+  grid-column: 1/13;
   display: grid;
   grid-template-columns: repeat(12, minmax(0, 1fr));
   grid-gap: 1.25em;
-  padding: 8em 3.125em 13em 3.125em;
 }
-.container__about .description {
-  grid-column: 7/13;
-  color: #000000;
+.container__page .page-description .column1 {
+  font-size: 1em;
+  line-height: 1.31707317em;
+  color: #3333FF;
+  grid-column: 1/3;
+}
+.container__page .page-description .column2 {
+  font-size: 1em;
+  line-height: 1.31707317em;
+  grid-column: 3/6;
+}
+.container__page .page-description .column3 {
+  font-size: 1em;
+  line-height: 1.31707317em;
+  grid-column: 7/10;
+}
+.container__page .page-description-image {
+  grid-column: 1/13;
+  display: grid;
+  grid-template-columns: repeat(12, minmax(0, 1fr));
+  grid-gap: 1.25em;
+}
+.container__page .page-description-image .column1 {
+  font-size: 1em;
+  line-height: 1.31707317em;
+  color: #3333FF;
+  grid-column: 1/3;
+}
+.container__page .page-description-image .column2 {
+  grid-column: 3/13;
+}
+.container__page .page-description-image .column2 img {
+  width: 100%;
+  border-radius: 7px;
+}
+.container__page .previous-next {
+  grid-column: 10/13;
+  text-align: right;
 }
 
 /*# sourceMappingURL=style.css.map */
