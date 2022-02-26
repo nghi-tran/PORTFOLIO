@@ -120,30 +120,25 @@ a:hover::before {
   }
 
   .work {
-    grid-column: 11/12;
+    grid-column: 7/9;
     font-size: $fontsizebody;
   }
 
   .about {
-    grid-column: 12/13;
+    grid-column: 9/11;
     font-size: $fontsizebody;
   }
 
 }
 
-.footer {
-  left: 0;
-  padding-bottom: 1.25em;
-  width: 100%;
-  color: $grey;
-  font-size: $fontsizesub;
-  text-align: center;
-}
+
 
 /* end general css */
 /* anything below this line is specific css */
 
-.container__body {
+
+/* css for work.html */
+.container__work {
 
   ul {
 
@@ -181,15 +176,34 @@ a:hover::before {
       display: block;
       position: absolute;
       left: 3.125em;
-      width: 25%;
+      width: 27%;
 
       align-self: center;
 
       h1 {
         color: $blue;
       }
+
+      h1.paragraph {
+        color: $black;
+      }
     }
   }
+}
 
+/* end css for work.html
 
+/* css for about.html */
+
+.container__about {
+  display: grid;
+  grid-template-columns: repeat(12, minmax(0, 1fr));
+  grid-gap: 1.25em;
+  padding: 8em 3.125em 13em 3.125em;
+
+  .description {
+    grid-column: 7/13;
+    color: $black;
+
+  }
 }
