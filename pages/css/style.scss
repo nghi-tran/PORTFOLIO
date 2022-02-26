@@ -1,0 +1,209 @@
+* {
+
+}
+
+@font-face {
+  font-family: 'UntitledSans';
+  src: url('../fonts/UntitledSans-Regular.otf');
+  font-style: normal;
+  font-weight: 200;
+}
+
+@font-face {
+  font-family: 'UntitledSans';
+  src: url('../fonts/UntitledSans-RegularItalic.otf');
+  font-style: italic;
+  font-weight: 200;
+}
+
+$bgcolor: white;
+$blue: #3333FF;
+$black: #000000;
+$grey: #8B8B8B;
+$lightblue: #DFE3F1;
+
+$fontsizeheader: 2.5em;
+$fontsizebody: 1.5em;
+$fontsizesub: 1em;
+
+
+html, .root {
+  font-size: 16px;
+  line-height: 27px;
+}
+body, .article {
+  font-family: 'UntitledSans';
+  font-size: 1em;
+  line-height: 1.5em;
+}
+h1, .h1 {
+  font-size: 2.5em;
+  line-height: 1.32786885em;
+}
+
+h2, .h2 {
+  font-size: 1.5em;
+  line-height: 1.31707317em;
+}
+
+h3, .h3 {
+  font-size: 1em;
+  line-height: 1.25em;
+}
+
+p, .p {
+  font-size: 1.5em;
+  line-height: 1.31707317em;
+}
+
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+li {
+
+}
+
+a {
+  text-decoration: none;
+  color: $blue;
+  position: relative;
+}
+
+a:hover {
+  text-decoration: none;
+  color: $blue;
+}
+
+a::before {
+  content: "";
+  position: absolute;
+  display: block;
+  width: 100%;
+  height: 2px;
+  bottom: 0;
+  left: 0;
+  background-color: $blue;
+  transform: scaleX(0);
+  transform-origin: top left;
+  transition: transform 0.3s ease;
+}
+
+a:hover::before {
+  transform: scaleX(1);
+}
+
+.container {
+  display: grid;
+  grid-template-columns: repeat(12, minmax(0, 1fr));
+  grid-gap: 1.25em;
+  background: red;
+
+}
+
+.container__navbar {
+  display: grid;
+  grid-template-columns: repeat(12, minmax(0, 1fr));
+  grid-gap: 1.25em;
+  padding: 1.875em 3.125em 0em 3.125em;
+
+  .home {
+    grid-column: 1/3;
+    font-size: $fontsizeheader;
+
+    a::before {
+      background-color: white;
+    }
+
+  }
+
+  .work {
+    grid-column: 7/9;
+    font-size: $fontsizebody;
+  }
+
+  .about {
+    grid-column: 9/11;
+    font-size: $fontsizebody;
+  }
+
+}
+
+
+
+/* end general css */
+/* anything below this line is specific css */
+
+
+/* css for work.html */
+.container__work {
+
+  ul {
+
+  }
+
+  li {
+    display: grid;
+    grid-template-columns: repeat(12, minmax(0, 1fr));
+    grid-gap: 1.25em;
+    padding: 1.875em 3.125em 1.25em 3.125em;
+
+    .project-description {
+      display: none;
+    }
+
+    .work-img {
+      grid-column: 5/13;
+      width: 100%;
+      height: auto;
+      border-radius: 7px;
+
+        img {
+          width: 100%;
+          border-radius: 7px;
+        }
+
+        a::before {
+          display: none;
+        }
+
+      }
+
+    .work-img:hover + .project-description{
+
+      display: block;
+      position: absolute;
+      left: 3.125em;
+      width: 27%;
+
+      align-self: center;
+
+      h1 {
+        color: $blue;
+      }
+
+      h1.paragraph {
+        color: $black;
+      }
+    }
+  }
+}
+
+/* end css for work.html
+
+/* css for about.html */
+
+.container__about {
+  display: grid;
+  grid-template-columns: repeat(12, minmax(0, 1fr));
+  grid-gap: 1.25em;
+  padding: 8em 3.125em 13em 3.125em;
+
+  .description {
+    grid-column: 7/13;
+    color: $black;
+
+  }
+}

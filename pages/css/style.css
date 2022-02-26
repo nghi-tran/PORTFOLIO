@@ -1,0 +1,161 @@
+@font-face {
+  font-family: "UntitledSans";
+  src: url("../fonts/UntitledSans-Regular.otf");
+  font-style: normal;
+  font-weight: 200;
+}
+@font-face {
+  font-family: "UntitledSans";
+  src: url("../fonts/UntitledSans-RegularItalic.otf");
+  font-style: italic;
+  font-weight: 200;
+}
+html, .root {
+  font-size: 16px;
+  line-height: 27px;
+}
+
+body, .article {
+  font-family: "UntitledSans";
+  font-size: 1em;
+  line-height: 1.5em;
+}
+
+h1, .h1 {
+  font-size: 2.5em;
+  line-height: 1.32786885em;
+}
+
+h2, .h2 {
+  font-size: 1.5em;
+  line-height: 1.31707317em;
+}
+
+h3, .h3 {
+  font-size: 1em;
+  line-height: 1.25em;
+}
+
+p, .p {
+  font-size: 1.5em;
+  line-height: 1.31707317em;
+}
+
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+a {
+  text-decoration: none;
+  color: #3333FF;
+  position: relative;
+}
+
+a:hover {
+  text-decoration: none;
+  color: #3333FF;
+}
+
+a::before {
+  content: "";
+  position: absolute;
+  display: block;
+  width: 100%;
+  height: 2px;
+  bottom: 0;
+  left: 0;
+  background-color: #3333FF;
+  transform: scaleX(0);
+  transform-origin: top left;
+  transition: transform 0.3s ease;
+}
+
+a:hover::before {
+  transform: scaleX(1);
+}
+
+.container {
+  display: grid;
+  grid-template-columns: repeat(12, minmax(0, 1fr));
+  grid-gap: 1.25em;
+  background: red;
+}
+
+.container__navbar {
+  display: grid;
+  grid-template-columns: repeat(12, minmax(0, 1fr));
+  grid-gap: 1.25em;
+  padding: 1.875em 3.125em 0em 3.125em;
+}
+.container__navbar .home {
+  grid-column: 1/3;
+  font-size: 2.5em;
+}
+.container__navbar .home a::before {
+  background-color: white;
+}
+.container__navbar .work {
+  grid-column: 7/9;
+  font-size: 1.5em;
+}
+.container__navbar .about {
+  grid-column: 9/11;
+  font-size: 1.5em;
+}
+
+/* end general css */
+/* anything below this line is specific css */
+/* css for work.html */
+.container__work li {
+  display: grid;
+  grid-template-columns: repeat(12, minmax(0, 1fr));
+  grid-gap: 1.25em;
+  padding: 1.875em 3.125em 1.25em 3.125em;
+}
+.container__work li .project-description {
+  display: none;
+}
+.container__work li .work-img {
+  grid-column: 5/13;
+  width: 100%;
+  height: auto;
+  border-radius: 7px;
+}
+.container__work li .work-img img {
+  width: 100%;
+  border-radius: 7px;
+}
+.container__work li .work-img a::before {
+  display: none;
+}
+.container__work li .work-img:hover + .project-description {
+  display: block;
+  position: absolute;
+  left: 3.125em;
+  width: 27%;
+  align-self: center;
+}
+.container__work li .work-img:hover + .project-description h1 {
+  color: #3333FF;
+}
+.container__work li .work-img:hover + .project-description h1.paragraph {
+  color: #000000;
+}
+
+/* end css for work.html
+
+/* css for about.html */
+.container__about {
+  display: grid;
+  grid-template-columns: repeat(12, minmax(0, 1fr));
+  grid-gap: 1.25em;
+  padding: 8em 3.125em 13em 3.125em;
+}
+.container__about .description {
+  grid-column: 7/13;
+  color: #000000;
+}
+
+/*# sourceMappingURL=style.css.map */
