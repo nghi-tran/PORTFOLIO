@@ -20,6 +20,8 @@ $bgcolor: white;
 $blue: #3333FF;
 $black: #000000;
 $grey: #8B8B8B;
+$lightblue: #DFE3F1;
+
 $fontsizeheader: 2.5em;
 $fontsizebody: 1.5em;
 $fontsizesub: 1em;
@@ -46,7 +48,7 @@ h2, .h2 {
 
 h3, .h3 {
   font-size: 1em;
-  line-height: 1em;
+  line-height: 1.25em;
 }
 
 p, .p {
@@ -97,6 +99,7 @@ a:hover::before {
   display: grid;
   grid-template-columns: repeat(12, minmax(0, 1fr));
   grid-gap: 1.25em;
+  background: red;
 
 }
 
@@ -125,5 +128,68 @@ a:hover::before {
     grid-column: 12/13;
     font-size: $fontsizebody;
   }
+
+}
+
+.footer {
+  left: 0;
+  padding-bottom: 1.25em;
+  width: 100%;
+  color: $grey;
+  font-size: $fontsizesub;
+  text-align: center;
+}
+
+/* end general css */
+/* anything below this line is specific css */
+
+.container__body {
+
+  ul {
+
+  }
+
+  li {
+    display: grid;
+    grid-template-columns: repeat(12, minmax(0, 1fr));
+    grid-gap: 1.25em;
+    padding: 1.875em 3.125em 1.25em 3.125em;
+
+    .project-description {
+      display: none;
+    }
+
+    .work-img {
+      grid-column: 5/13;
+      width: 100%;
+      height: auto;
+      border-radius: 7px;
+
+        img {
+          width: 100%;
+          border-radius: 7px;
+        }
+
+        a::before {
+          display: none;
+        }
+
+      }
+
+    .work-img:hover + .project-description{
+
+      display: block;
+      position: absolute;
+      left: 3.125em;
+      width: 25%;
+
+      align-self: center;
+
+      h1 {
+        color: $blue;
+      }
+    }
+  }
+
 
 }
