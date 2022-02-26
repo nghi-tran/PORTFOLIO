@@ -33,7 +33,7 @@ h2, .h2 {
 
 h3, .h3 {
   font-size: 1em;
-  line-height: 1em;
+  line-height: 1.25em;
 }
 
 p, .p {
@@ -80,6 +80,7 @@ a:hover::before {
   display: grid;
   grid-template-columns: repeat(12, minmax(0, 1fr));
   grid-gap: 1.25em;
+  background: red;
 }
 
 .container__navbar {
@@ -102,6 +103,50 @@ a:hover::before {
 .container__navbar .about {
   grid-column: 12/13;
   font-size: 1.5em;
+}
+
+.footer {
+  left: 0;
+  padding-bottom: 1.25em;
+  width: 100%;
+  color: #8B8B8B;
+  font-size: 1em;
+  text-align: center;
+}
+
+/* end general css */
+/* anything below this line is specific css */
+.container__body li {
+  display: grid;
+  grid-template-columns: repeat(12, minmax(0, 1fr));
+  grid-gap: 1.25em;
+  padding: 1.875em 3.125em 1.25em 3.125em;
+}
+.container__body li .project-description {
+  display: none;
+}
+.container__body li .work-img {
+  grid-column: 5/13;
+  width: 100%;
+  height: auto;
+  border-radius: 7px;
+}
+.container__body li .work-img img {
+  width: 100%;
+  border-radius: 7px;
+}
+.container__body li .work-img a::before {
+  display: none;
+}
+.container__body li .work-img:hover + .project-description {
+  display: block;
+  position: absolute;
+  left: 3.125em;
+  width: 25%;
+  align-self: center;
+}
+.container__body li .work-img:hover + .project-description h1 {
+  color: #3333FF;
 }
 
 /*# sourceMappingURL=style.css.map */
