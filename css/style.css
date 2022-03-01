@@ -134,14 +134,14 @@ a:hover::before {
   display: block;
   position: absolute;
   left: 3.125em;
-  width: 27%;
+  width: 20%;
   align-self: center;
 }
-.container__work li .work-img:hover + .project-description h1 {
-  color: #3333FF;
-}
-.container__work li .work-img:hover + .project-description h1.paragraph {
+.container__work li .work-img:hover + .project-description h2 {
   color: #000000;
+}
+.container__work li .work-img:hover + .project-description p {
+  font-size: 1em;
 }
 
 /* end css for work.html
