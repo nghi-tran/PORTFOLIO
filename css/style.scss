@@ -176,17 +176,18 @@ a:hover::before {
       display: block;
       position: absolute;
       left: 3.125em;
-      width: 27%;
+      width: 20%;
 
       align-self: center;
 
-      h1 {
-        color: $blue;
-      }
-
-      h1.paragraph {
+      h2 {
         color: $black;
       }
+
+      p {
+        font-size: $fontsizesub;
+      }
+
     }
   }
 }
@@ -200,6 +201,7 @@ a:hover::before {
   grid-template-columns: repeat(12, minmax(0, 1fr));
   grid-gap: 1.25em;
   padding: 8em 3.125em 13em 3.125em;
+
 
   .description {
     grid-column: 7/13;
