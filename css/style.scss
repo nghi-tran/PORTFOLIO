@@ -137,10 +137,15 @@ a:hover::before {
 /* anything below this line is specific css */
 
 
+<<<<<<< HEAD
 
 /* css for work.html */
 .container__work {
   margin-top: 2em;
+=======
+/* css for work.html */
+.container__work {
+>>>>>>> ec0d9218bb1d6e16309d2c2712c04edd88527b99
 
   ul {
 
@@ -154,6 +159,7 @@ a:hover::before {
 
     .project-description {
       display: none;
+<<<<<<< HEAD
 
       animation: 1s fadeIn;
       animation-fill-mode: forwards;
@@ -169,6 +175,8 @@ a:hover::before {
         visibility: visible;
         opacity: 1;
       }
+=======
+>>>>>>> ec0d9218bb1d6e16309d2c2712c04edd88527b99
     }
 
     .work-img {

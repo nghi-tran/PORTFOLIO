@@ -133,10 +133,13 @@ a:hover::before {
   width: 100%;
   border-radius: 7px;
 }
+<<<<<<< HEAD
 .container__page .banner-image video {
   width: 100%;
   border-radius: 7px;
 }
+=======
+>>>>>>> ec0d9218bb1d6e16309d2c2712c04edd88527b99
 .container__page .page-description {
   grid-column: 1/13;
   display: grid;
@@ -178,10 +181,13 @@ a:hover::before {
   width: 100%;
   border-radius: 7px;
 }
+<<<<<<< HEAD
 .container__page .page-description-image .column2 video {
   width: 100%;
   border-radius: 7px;
 }
+=======
+>>>>>>> ec0d9218bb1d6e16309d2c2712c04edd88527b99
 .container__page .page-description-image .column3 {
   grid-column: 7/13;
 }
@@ -189,10 +195,13 @@ a:hover::before {
   width: 100%;
   border-radius: 7px;
 }
+<<<<<<< HEAD
 .container__page .page-description-image .column3 video {
   width: 100%;
   border-radius: 7px;
 }
+=======
+>>>>>>> ec0d9218bb1d6e16309d2c2712c04edd88527b99
 .container__page .previous-next {
   grid-column: 10/13;
   text-align: right;
