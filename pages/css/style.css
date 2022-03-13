@@ -133,6 +133,10 @@ a:hover::before {
   width: 100%;
   border-radius: 7px;
 }
+.container__page .banner-image video {
+  width: 100%;
+  border-radius: 7px;
+}
 .container__page .page-description {
   grid-column: 1/13;
   display: grid;
@@ -174,10 +178,18 @@ a:hover::before {
   width: 100%;
   border-radius: 7px;
 }
+.container__page .page-description-image .column2 video {
+  width: 100%;
+  border-radius: 7px;
+}
 .container__page .page-description-image .column3 {
   grid-column: 7/13;
 }
 .container__page .page-description-image .column3 img {
+  width: 100%;
+  border-radius: 7px;
+}
+.container__page .page-description-image .column3 video {
   width: 100%;
   border-radius: 7px;
 }
