@@ -19,6 +19,11 @@
     <link rel="icon" type="image/png" sizes="16x16" href="./img/favicon-16x16.png">
     <link rel="manifest" href="/site.webmanifest">
 
+    <script src="https://unpkg.com/scrollreveal@4"></script>
+  	<script>
+  		ScrollReveal({ duration: 1000 })
+  	</script>
+
 
   </head>
 
@@ -40,7 +45,7 @@
       </div>
 
       <div class="banner-image"> <!--page description card-->
-        <img src="./img/poster-show-web/poster-show-home-record.gif">
+        <img src="./img/poster-show-web/poster-show-banner.gif">
       </div>
 
       <div class="page-description">
@@ -69,22 +74,27 @@
 
       <div class="page-description">
         <div class="column1">
-          Key Points
+          Main Concerns
         </div>
 
         <div class="column3">
-          The theme of the website is based on a poster that the class
-          voted on named "Fine Print." All assests and color choices
-          were made to match the poster theme.
-        </div>
-        <div class="column3">
-          Some of the main user experience concerns after assessing
-          the nature of the event and the guests: <br>
           Many guests that are parents, grandparents of students and might not
           be comfortable with digital products. <br>
           A wide selection of almost 200 posters that guests need to go through
-          but short amount of time to bid. 
+          but short amount of time to bid.
         </div>
+      </div>
+
+      <div class="banner-image"> <!--page description card-->
+        <img src="./img/poster-show-web/poster-show-auction.gif">
+      </div>
+
+      <div class="banner-image"> <!--page description card-->
+        <img src="./img/poster-show-web/poster-show-all-1.png">
+      </div>
+
+      <div class="banner-image"> <!--page description card-->
+        <img src="./img/poster-show-web/poster-show-all-2.png">
       </div>
 
 
@@ -147,14 +157,22 @@
         </div>
       </div> -->
 
+
       <div class="previous-next">
-       < <a href="#">Previous</a> | <a href="#">Next</a> >
+       < <a href="mushroom.html">Previous</a> | <a href="dew.html">Next</a> >
       </div>
 
 
     </div>
 
 
+
+
+    <script>
+  		ScrollReveal().reveal('.banner-image',{ delay: 200 })
+      ScrollReveal().reveal('.page-description',{ delay: 200 })
+      ScrollReveal().reveal('.page-description-image',{ delay: 200 })
+  	</script>
 
 
   </body>
