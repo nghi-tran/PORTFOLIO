@@ -19,6 +19,11 @@
     <link rel="icon" type="image/png" sizes="16x16" href="./img/favicon-16x16.png">
     <link rel="manifest" href="/site.webmanifest">
 
+    <script src="https://unpkg.com/scrollreveal@4"></script>
+  	<script>
+  		ScrollReveal({ duration: 1000 })
+  	</script>
+
 
   </head>
 
@@ -113,29 +118,25 @@
 
       <div class="page-description-image">
         <div class="column1">
-          UX Flows
-        </div>
-        <div class="column2">
-          <img src="./img/port-test.jpg">
-        </div>
-      </div>
-
-      <div class="page-description-image">
-        <div class="column1">
           Ideate
         </div>
         <div class="column2">
-          <img src="./img/port-test.jpg">
+          <img src="./img/dew/dew-ideate.png">
         </div>
       </div>
 
-      <div class="page-description-image">
+      <div class="page-description">
         <div class="column1">
           Wireframes
         </div>
-        <div class="column2">
-          <img src="./img/port-test.jpg">
+        <div class="column3">
+          From the interviewing and ideating phase, I came up with a wireframe system for Dew.
+          The design is clean and bright to emmulate the feel of skincare.
         </div>
+      </div>
+
+      <div class="banner-image"> <!--page description card-->
+        <img src="./img/dew/dew-wireframe.png">
       </div>
 
       <div class="page-description-image">
@@ -143,18 +144,68 @@
           High Fidelity
         </div>
         <div class="column2">
-          <img src="./img/port-test.jpg">
+          <img src="./img/dew/dew-home.png">
         </div>
       </div>
 
       <div class="page-description-image">
+        <div class="column2">
+          <img src="./img/dew/dew-track-1.png">
+        </div>
+      </div>
+
+      <div class="page-description-image">
+        <div class="column2">
+          <img src="./img/dew/dew-track-2.png">
+        </div>
+      </div>
+
+      <div class="page-description-image">
+        <div class="column2">
+          <img src="./img/dew/dew-more.png">
+        </div>
+      </div>
+
+      <div class="page-description-image">
+        <div class="column2">
+          <img src="./img/dew/dew-profile.png">
+        </div>
+      </div>
+
+      <div class="page-description-image">
+        <div class="column2">
+          <img src="./img/dew/dew-generator.png">
+        </div>
+      </div>
+
+      <div class="page-description">
+        <div class="column1">
+          User Testing
+        </div>
+
+        <div class="column3">
+          Some difficulties nagivating towards the skincare routine generator, which is supposed to be the highlight.
+          <br><br>
+          Takes a bit of time at first to go through and explore all of the features but then it's gets simple to use the features.
+          <br><br>
+          Easy process to add and edit the daily routine, allows for easy customizations.
+        </div>
+      </div>
+
+      <div class="page-description">
         <div class="column1">
           Next Steps
         </div>
-        <div class="column2">
-          <img src="./img/port-test.jpg">
+
+        <div class="column3">
+          In the future I would like to focus and expand on the generating a new routine feature. I would like to make it more intuiative.
+          This feature would also be highlight more on the welcome page.
         </div>
       </div>
+
+
+
+
 
 
 
@@ -218,13 +269,17 @@
       </div> -->
 
       <div class="previous-next">
-       < <a href="#">Previous</a> | <a href="#">Next</a> >
+       < <a href="poster-show-web.html">Previous</a> | <a href="senior-show-poster.html">Next</a> >
       </div>
 
 
     </div>
 
-
+    <script>
+  		ScrollReveal().reveal('.banner-image',{ delay: 200 })
+      ScrollReveal().reveal('.page-description',{ delay: 200 })
+      ScrollReveal().reveal('.page-description-image',{ delay: 200 })
+  	</script>
 
 
   </body>

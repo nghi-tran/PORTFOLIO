@@ -19,6 +19,11 @@
     <link rel="icon" type="image/png" sizes="16x16" href="./img/favicon-16x16.png">
     <link rel="manifest" href="/site.webmanifest">
 
+    <script src="https://unpkg.com/scrollreveal@4"></script>
+  	<script>
+  		ScrollReveal({ duration: 1000 })
+  	</script>
+
 
   </head>
 
@@ -31,7 +36,7 @@
 
     <div class="container__page">
       <div class="page-title">
-        <h1>Beyond the Fairy Rings</h1>
+        <h1>Beyond the Fairy Ring</h1>
         <h3>An exhibition about mushrooms. Wild, poisonous, edible, bioluminescent.
         </h3>
       </div>
@@ -46,8 +51,8 @@
         </div>
         <div class="column2">
           Exhibition Design <br>
-          Sketch Up -- InDesign <br>
-          Illustrator -- Photoshop <br>
+          Sketch Up, InDesign, <br>
+          Illustrator, Photoshop <br>
           Fall 2021
         </div>
         <div class="column3">
@@ -191,14 +196,18 @@
       </div>
 
       <div class="previous-next">
-       < <a href="#">Previous</a> | <a href="#">Next</a> >
+       < <a href="pop-up.html">Previous</a> | <a href="poster-show-web.html">Next</a> >
       </div>
 
 
     </div>
 
 
-
+    <script>
+  		ScrollReveal().reveal('.banner-image',{ delay: 150 })
+      ScrollReveal().reveal('.page-description',{ delay: 150 })
+      ScrollReveal().reveal('.page-description-image',{ delay: 150 })
+  	</script>
 
   </body>
 

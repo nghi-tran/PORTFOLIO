@@ -139,6 +139,7 @@ a:hover::before {
 
 /* css for work.html */
 .container__work {
+  margin-top: 2em;
 
   ul {
 
@@ -152,6 +153,21 @@ a:hover::before {
 
     .project-description {
       display: none;
+
+      animation: 1s fadeIn;
+      animation-fill-mode: forwards;
+
+      visibility: hidden;
+    }
+
+    @keyframes fadeIn {
+      0% {
+        opacity: 0;
+      }
+      100% {
+        visibility: visible;
+        opacity: 1;
+      }
     }
 
     .work-img {

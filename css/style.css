@@ -108,6 +108,9 @@ a:hover::before {
 /* end general css */
 /* anything below this line is specific css */
 /* css for work.html */
+.container__work {
+  margin-top: 2em;
+}
 .container__work li {
   display: grid;
   grid-template-columns: repeat(12, minmax(0, 1fr));
@@ -116,6 +119,18 @@ a:hover::before {
 }
 .container__work li .project-description {
   display: none;
+  animation: 1s fadeIn;
+  animation-fill-mode: forwards;
+  visibility: hidden;
+}
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    visibility: visible;
+    opacity: 1;
+  }
 }
 .container__work li .work-img {
   grid-column: 5/13;
