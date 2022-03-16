@@ -12,7 +12,7 @@ class MyHeader extends HTMLElement {
         </div>
 
         <div class="about">
-          <a href="../about.html">about</a>
+          <a href="../about.html">info</a>
         </div>
     </div>
 

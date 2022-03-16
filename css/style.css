@@ -80,7 +80,6 @@ a:hover::before {
   display: grid;
   grid-template-columns: repeat(12, minmax(0, 1fr));
   grid-gap: 1.25em;
-  background: red;
 }
 
 .container__navbar {
@@ -103,6 +102,29 @@ a:hover::before {
 .container__navbar .about {
   grid-column: 9/11;
   font-size: 1.5em;
+}
+@media screen and (max-width: 414px) {
+  .container__navbar {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    grid-gap: 1em;
+    padding: 1.875em 1.5em 0em 1.5em;
+  }
+  .container__navbar .home {
+    grid-column: 1/1;
+    font-size: 2em;
+  }
+  .container__navbar .home a::before {
+    background-color: white;
+  }
+  .container__navbar .work {
+    grid-column: 4/5;
+    font-size: 1.25em;
+  }
+  .container__navbar .about {
+    grid-column: 5/6;
+    font-size: 1.25em;
+  }
 }
 
 /* end general css */
@@ -158,6 +180,33 @@ a:hover::before {
 .container__work li .work-img:hover + .project-description p {
   font-size: 1em;
 }
+@media screen and (max-width: 414px) {
+  .container__work {
+    margin-top: 2em;
+  }
+  .container__work li {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    grid-gap: 1em;
+    padding: 0.15em 1.5em 1.5em 1.5em;
+  }
+  .container__work li .work-img {
+    grid-column: 1/5;
+    width: 100%;
+    height: auto;
+    border-radius: 5px;
+  }
+  .container__work li .work-img img {
+    width: 100%;
+    border-radius: 5px;
+  }
+  .container__work li .work-img a::before {
+    display: none;
+  }
+  .container__work li .work-img:hover + .project-description {
+    display: none;
+  }
+}
 
 /* end css for work.html
 
@@ -171,6 +220,22 @@ a:hover::before {
 .container__about .description {
   grid-column: 7/13;
   color: #000000;
+}
+@media screen and (max-width: 414px) {
+  .container__about {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    grid-gap: 1em;
+    padding: 0.15em 1.5em 1.5em 1.5em;
+  }
+  .container__about .description {
+    padding-top: 5em;
+    grid-column: 1/5;
+    color: #000000;
+  }
+  .container__about .description h1 {
+    font-size: 1.25em;
+  }
 }
 
 /*# sourceMappingURL=style.css.map */

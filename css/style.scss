@@ -26,6 +26,10 @@ $fontsizeheader: 2.5em;
 $fontsizebody: 1.5em;
 $fontsizesub: 1em;
 
+$mobileheader: 2em;
+$mobilebody: 1.25em;
+$mobilesub: 1em;
+
 
 html, .root {
   font-size: 16px;
@@ -99,7 +103,7 @@ a:hover::before {
   display: grid;
   grid-template-columns: repeat(12, minmax(0, 1fr));
   grid-gap: 1.25em;
-  background: red;
+
 
 }
 
@@ -116,7 +120,6 @@ a:hover::before {
     a::before {
       background-color: white;
     }
-
   }
 
   .work {
@@ -129,8 +132,32 @@ a:hover::before {
     font-size: $fontsizebody;
   }
 
-}
+  @media screen and (max-width: 414px) {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    grid-gap: 1em;
+    padding: 1.875em 1.5em 0em 1.5em;
 
+    .home {
+      grid-column: 1/1;
+      font-size: $mobileheader;
+
+      a::before {
+        background-color: white;
+      }
+    }
+
+    .work {
+      grid-column: 4/5;
+      font-size: $mobilebody;
+    }
+
+    .about {
+      grid-column: 5/6;
+      font-size: $mobilebody;
+    }
+  }
+}
 
 
 /* end general css */
@@ -140,6 +167,7 @@ a:hover::before {
 
 /* css for work.html */
 .container__work {
+
   margin-top: 2em;
 
   ul {
@@ -204,7 +232,37 @@ a:hover::before {
       p {
         font-size: $fontsizesub;
       }
+    }
+  }
 
+  @media screen and (max-width: 414px) {
+    margin-top: 2em;
+
+    li {
+      display: grid;
+      grid-template-columns: repeat(4, minmax(0, 1fr));
+      grid-gap: 1em;
+      padding: 0.15em 1.5em 1.5em 1.5em;
+
+      .work-img {
+        grid-column: 1/5;
+        width: 100%;
+        height: auto;
+        border-radius: 5px;
+
+          img {
+            width: 100%;
+            border-radius: 5px;
+          }
+
+          a::before {
+            display: none;
+          }
+        }
+
+      .work-img:hover + .project-description {
+        display: none;
+      }
     }
   }
 }
@@ -223,6 +281,23 @@ a:hover::before {
   .description {
     grid-column: 7/13;
     color: $black;
+  }
 
+  @media screen and (max-width: 414px) {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    grid-gap: 1em;
+    padding: 0.15em 1.5em 1.5em 1.5em;
+
+    .description {
+      padding-top: 5em;
+
+      grid-column: 1/5;
+      color: $black;
+
+      h1{
+        font-size: $mobilebody;
+      }
+    }
   }
 }
