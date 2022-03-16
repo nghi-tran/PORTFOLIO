@@ -103,7 +103,7 @@ a:hover::before {
   grid-column: 9/11;
   font-size: 1.5em;
 }
-@media screen and (max-width: 414px) {
+@media screen and (max-width: 800px) {
   .container__navbar {
     display: grid;
     grid-template-columns: repeat(4, minmax(0, 1fr));
@@ -225,7 +225,7 @@ a:hover::before {
   grid-column: 1/13;
   text-align: right;
 }
-@media screen and (max-width: 414px) {
+@media screen and (max-width: 800px) {
   .container__page {
     display: flex;
     flex-direction: column;

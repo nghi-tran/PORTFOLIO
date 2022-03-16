@@ -130,7 +130,7 @@ a:hover::before {
     font-size: $fontsizebody;
   }
 
-  @media screen and (max-width: 414px) {
+  @media screen and (max-width: 800px) {
     display: grid;
     grid-template-columns: repeat(4, minmax(0, 1fr));
     grid-gap: 1em;
@@ -292,7 +292,7 @@ a:hover::before {
 
 
 
-  @media screen and (max-width: 414px) {
+  @media screen and (max-width: 800px) {
     display: flex;
     flex-direction: column;
     gap: 0.75em;
@@ -412,7 +412,7 @@ a:hover::before {
               border-radius: 7px;
             }
           }
-      } 
+      }
 
 
       .previous-next {
