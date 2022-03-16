@@ -103,7 +103,7 @@ a:hover::before {
   grid-column: 9/11;
   font-size: 1.5em;
 }
-@media screen and (max-width: 414px) {
+@media screen and (max-width: 800px) {
   .container__navbar {
     display: grid;
     grid-template-columns: repeat(4, minmax(0, 1fr));
@@ -180,7 +180,7 @@ a:hover::before {
 .container__work li .work-img:hover + .project-description p {
   font-size: 1em;
 }
-@media screen and (max-width: 414px) {
+@media screen and (max-width: 800px) {
   .container__work {
     margin-top: 2em;
   }
@@ -221,7 +221,7 @@ a:hover::before {
   grid-column: 7/13;
   color: #000000;
 }
-@media screen and (max-width: 414px) {
+@media screen and (max-width: 800px) {
   .container__about {
     display: grid;
     grid-template-columns: repeat(4, minmax(0, 1fr));

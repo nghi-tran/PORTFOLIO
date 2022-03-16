@@ -132,7 +132,7 @@ a:hover::before {
     font-size: $fontsizebody;
   }
 
-  @media screen and (max-width: 414px) {
+  @media screen and (max-width: 800px) {
     display: grid;
     grid-template-columns: repeat(4, minmax(0, 1fr));
     grid-gap: 1em;
@@ -235,7 +235,7 @@ a:hover::before {
     }
   }
 
-  @media screen and (max-width: 414px) {
+  @media screen and (max-width: 800px) {
     margin-top: 2em;
 
     li {
@@ -283,7 +283,7 @@ a:hover::before {
     color: $black;
   }
 
-  @media screen and (max-width: 414px) {
+  @media screen and (max-width: 800px) {
     display: grid;
     grid-template-columns: repeat(4, minmax(0, 1fr));
     grid-gap: 1em;
