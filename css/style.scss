@@ -19,12 +19,18 @@
 $bgcolor: white;
 $blue: #3333FF;
 $black: #000000;
-$grey: #8B8B8B;
+$grey: #595959;
 $lightblue: #DFE3F1;
 
 $fontsizeheader: 2.5em;
 $fontsizebody: 1.5em;
 $fontsizesub: 1em;
+$projectbody: 1.25em;
+
+$lineheight-header: 1.5em;
+$lineheightbody: 1.25em;
+$lineheightsub: 0.75em;
+$lineheight-projectbody: 1.6em;
 
 $mobileheader: 2em;
 $mobilebody: 1.25em;
@@ -42,12 +48,12 @@ body, .article {
 }
 h1, .h1 {
   font-size: 2.5em;
-  line-height: 1.32786885em;
+  line-height: $lineheight-header;
 }
 
 h2, .h2 {
   font-size: 1.5em;
-  line-height: 1.31707317em;
+  line-height: $lineheight-header;
 }
 
 h3, .h3 {
@@ -108,28 +114,45 @@ a:hover::before {
 }
 
 .container__navbar {
-  display: grid;
-  grid-template-columns: repeat(12, minmax(0, 1fr));
-  grid-gap: 1.25em;
-  padding: 1.875em 3.125em 0em 3.125em;
+    background-color: white;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 2;
 
-  .home {
-    grid-column: 1/3;
-    font-size: $fontsizeheader;
+  .container__wrapper {
+    display: grid;
+    grid-template-columns: repeat(12, minmax(0, 1fr));
+    grid-gap: 1.25em;
+    padding: 1.25em 3.125em 0.75em 3.125em;
+    margin-bottom: 1em;
 
-    a::before {
-      background-color: white;
+    .home {
+      grid-column: 1/3;
+      font-size: $fontsizeheader;
+
+      a::before {
+        background-color: white;
+      }
+
     }
-  }
 
-  .work {
-    grid-column: 7/9;
-    font-size: $fontsizebody;
-  }
+    .work {
+      grid-column: 7/9;
+      font-size: $fontsizebody;
+    }
 
-  .about {
-    grid-column: 9/11;
-    font-size: $fontsizebody;
+    .about {
+      grid-column: 9/11;
+      font-size: $fontsizebody;
+    }
+
+  }
+  .divider {
+    border: 0.75px solid #EAEAEA;
+    padding: 0;
+    margin: 0em 3.125em 0em 3.125em;
+
   }
 
   @media screen and (max-width: 800px) {
@@ -168,7 +191,8 @@ a:hover::before {
 /* css for work.html */
 .container__work {
 
-  margin-top: 2em;
+  margin-top: 5em;
+
 
   ul {
 
@@ -177,8 +201,8 @@ a:hover::before {
   li {
     display: grid;
     grid-template-columns: repeat(12, minmax(0, 1fr));
-    grid-gap: 1.25em;
-    padding: 1.875em 3.125em 1.25em 3.125em;
+    grid-gap: 0.25em;
+    padding: 1.75em 3.125em 1.25em 3.125em;
 
     .project-description {
       display: none;
@@ -231,7 +255,12 @@ a:hover::before {
 
       p {
         font-size: $fontsizesub;
+
       }
+    }
+
+    .project-description-mobile{
+      display: none;
     }
   }
 
@@ -262,6 +291,22 @@ a:hover::before {
 
       .work-img:hover + .project-description {
         display: none;
+      }
+
+      .project-description-mobile{
+        display: block;
+        grid-column: 1/5;
+
+        h2 {
+          font-size: $mobilesub;
+          margin-top: -0.5em;
+          margin-bottom: 0em;
+        }
+
+        p {
+          font-size: $mobilesub;
+          color: $grey;
+        }
       }
     }
   }
