@@ -3,6 +3,7 @@ class MyHeader extends HTMLElement {
     this.innerHTML =
     `
     <div class="container__navbar">
+      <div class="container__wrapper">
         <div class="home">
           <a href="index.html">nghitran</a>
         </div>
@@ -14,6 +15,8 @@ class MyHeader extends HTMLElement {
         <div class="about">
           <a href="about.html">info</a>
         </div>
+      </div>
+        <hr class="divider">
     </div>
 
      `
