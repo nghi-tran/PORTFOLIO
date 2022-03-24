@@ -98,7 +98,7 @@ a:hover::before {
 }
 .container__navbar .container__wrapper .home {
   grid-column: 1/3;
-  font-size: 2.5em;
+  font-size: 2em;
 }
 .container__navbar .container__wrapper .home a::before {
   background-color: white;
@@ -410,7 +410,7 @@ a:hover::before {
 .carousel .carousel__actions button {
   border-radius: 50px;
   border: 0;
-  font-size: 2.5em;
+  font-size: 2em;
   cursor: pointer;
   width: 1em;
   height: 1em;
