@@ -111,32 +111,37 @@ a:hover::before {
   grid-column: 9/11;
   font-size: 1.5em;
 }
+@media screen and (max-width: 800px) {
+  .container__navbar .container__wrapper {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    grid-gap: 1em;
+    padding: 0.5em 1.5em 0em 1.5em;
+  }
+  .container__navbar .container__wrapper .home {
+    grid-column: 1/1;
+    font-size: 1.25em;
+  }
+  .container__navbar .container__wrapper .home a::before {
+    background-color: white;
+  }
+  .container__navbar .container__wrapper .work {
+    grid-column: 4/5;
+    font-size: 1em;
+  }
+  .container__navbar .container__wrapper .about {
+    grid-column: 5/6;
+    font-size: 1em;
+  }
+}
 .container__navbar .divider {
   border: 0.75px solid #EAEAEA;
   padding: 0;
   margin: 0em 3.125em 0em 3.125em;
 }
 @media screen and (max-width: 800px) {
-  .container__navbar {
-    display: grid;
-    grid-template-columns: repeat(4, minmax(0, 1fr));
-    grid-gap: 1em;
-    padding: 1.875em 1.5em 0em 1.5em;
-  }
-  .container__navbar .home {
-    grid-column: 1/1;
-    font-size: 2em;
-  }
-  .container__navbar .home a::before {
-    background-color: white;
-  }
-  .container__navbar .work {
-    grid-column: 4/5;
-    font-size: 1.25em;
-  }
-  .container__navbar .about {
-    grid-column: 5/6;
-    font-size: 1.25em;
+  .container__navbar .divider {
+    margin: 0.5em 1.5em 0em 1.5em;
   }
 }
 
@@ -263,7 +268,7 @@ a:hover::before {
     display: flex;
     flex-direction: column;
     gap: 0.75em;
-    padding: 0.15em 1.5em 1.5em 1.5em;
+    padding: 3em 1.5em 1.5em 1.5em;
   }
   .container__page .page-title {
     margin-bottom: 0em;
@@ -307,6 +312,21 @@ a:hover::before {
     color: #595959;
   }
   .container__page .page-description .column3 {
+    font-size: 1em;
+    line-height: 1.31707317em;
+    color: #595959;
+  }
+  .container__page .page-description-one-col {
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+  }
+  .container__page .page-description-one-col .column1 {
+    font-size: 1em;
+    line-height: 1.31707317em;
+    color: #000000;
+  }
+  .container__page .page-description-one-col .column2 {
     font-size: 1em;
     line-height: 1.31707317em;
     color: #595959;
@@ -396,6 +416,11 @@ a:hover::before {
   height: 1em;
   background-color: white;
   color: #595959;
+}
+@media screen and (max-width: 800px) {
+  .carousel .carousel__actions button {
+    font-size: 1.25em;
+  }
 }
 
 .carousel .carousel__actions button#carousel__button--prev {

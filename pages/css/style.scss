@@ -132,7 +132,6 @@ a:hover::before {
       a::before {
         background-color: white;
       }
-
     }
 
     .work {
@@ -145,39 +144,42 @@ a:hover::before {
       font-size: $fontsizebody;
     }
 
+    @media screen and (max-width: 800px) {
+      display: grid;
+      grid-template-columns: repeat(4, minmax(0, 1fr));
+      grid-gap: 1em;
+      padding: 0.5em 1.5em 0em 1.5em;
+
+      .home {
+        grid-column: 1/1;
+        font-size: $mobilebody;
+
+        a::before {
+          background-color: white;
+        }
+      }
+
+      .work {
+        grid-column: 4/5;
+        font-size: $mobilesub;
+      }
+
+      .about {
+        grid-column: 5/6;
+        font-size: $mobilesub;
+      }
+    }
+
   }
   .divider {
     border: 0.75px solid #EAEAEA;
     padding: 0;
     margin: 0em 3.125em 0em 3.125em;
 
-  }
-
-
-  @media screen and (max-width: 800px) {
-    display: grid;
-    grid-template-columns: repeat(4, minmax(0, 1fr));
-    grid-gap: 1em;
-    padding: 1.875em 1.5em 0em 1.5em;
-
-    .home {
-      grid-column: 1/1;
-      font-size: $mobileheader;
-
-      a::before {
-        background-color: white;
-      }
+    @media screen and (max-width: 800px) {
+      margin: 0.5em 1.5em 0em 1.5em;
     }
 
-    .work {
-      grid-column: 4/5;
-      font-size: $mobilebody;
-    }
-
-    .about {
-      grid-column: 5/6;
-      font-size: $mobilebody;
-    }
   }
 }
 
@@ -351,7 +353,7 @@ a:hover::before {
     display: flex;
     flex-direction: column;
     gap: 0.75em;
-    padding: 0.15em 1.5em 1.5em 1.5em;
+    padding: 3em 1.5em 1.5em 1.5em;
 
     .page-title {
       margin-bottom: 0em;
@@ -416,6 +418,26 @@ a:hover::before {
           color: $grey;
         }
       }
+
+      .page-description-one-col {
+        display: flex;
+        flex-direction: column;
+        gap: 1em;
+
+          .column1 {
+            font-size: $mobilesub;
+            line-height: 1.31707317em;
+
+            color: $black;
+          }
+
+          .column2 {
+            font-size: $mobilesub;
+            line-height: 1.31707317em;
+
+            color: $grey;
+          }
+        }
 
 
       .page-description-image {
@@ -522,6 +544,10 @@ a:hover::before {
   height: 1em;
   background-color: white;
   color: $grey;
+
+  @media screen and (max-width: 800px) {
+    font-size: $mobilebody;
+  }
 }
 
 .carousel .carousel__actions button#carousel__button--prev {
