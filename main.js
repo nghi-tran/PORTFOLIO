@@ -2,7 +2,7 @@ class MyHeader extends HTMLElement {
   connectedCallback() {
     this.innerHTML =
     `
-    <div class="container__navbar">
+    <div id="navbar" class="container__navbar">
       <div class="container__wrapper">
         <div class="home">
           <a href="index.html">nghitran</a>
@@ -16,7 +16,7 @@ class MyHeader extends HTMLElement {
           <a href="about.html">info</a>
         </div>
       </div>
-        <hr class="divider">
+
     </div>
 
      `
@@ -25,3 +25,15 @@ class MyHeader extends HTMLElement {
 }
 
 customElements.define('my-header', MyHeader);
+
+
+var prevScrollpos = window.pageYOffset;
+  window.onscroll = function() {
+  var currentScrollPos = window.pageYOffset;
+    if (prevScrollpos > currentScrollPos) {
+      document.getElementById("navbar").style.top = "0";
+    } else {
+      document.getElementById("navbar").style.top = "-8%";
+    }
+    prevScrollpos = currentScrollPos;
+  }
