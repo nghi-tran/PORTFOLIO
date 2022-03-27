@@ -229,6 +229,9 @@ a:hover::before {
   grid-column: 3/10;
   color: #595959;
 }
+.container__page .page-description-one-col .column2 p {
+  font-size: 1em;
+}
 .container__page .page-description-image {
   grid-column: 1/13;
   display: grid;
@@ -443,6 +446,55 @@ a:hover::before {
     opacity: 1;
     transform: opacity linear;
   }
+}
+.page-description-one-col-accordion {
+  grid-column: 1/13;
+  display: grid;
+  grid-template-columns: repeat(12, minmax(0, 1fr));
+  grid-gap: 1.25em;
+}
+.page-description-one-col-accordion .column1 {
+  font-size: 1.25em;
+  line-height: 1.6em;
+  color: #000000;
+  grid-column: 1/3;
+}
+.page-description-one-col-accordion .column2 {
+  font-size: 1.25em;
+  line-height: 1.6em;
+  grid-column: 3/13;
+  color: #595959;
+}
+.page-description-one-col-accordion .column2 .accordion {
+  background-color: white;
+  color: #000000;
+  cursor: pointer;
+  padding: 0 0 1.25em 0;
+  width: 100%;
+  border: none;
+  border-bottom: 1px solid #595959;
+  text-align: left;
+  outline: none;
+  font-size: 1em;
+  transition: 0.5s;
+}
+.page-description-one-col-accordion .column2 .active, .page-description-one-col-accordion .column2 .accordion:hover {
+  background-color: none;
+}
+.page-description-one-col-accordion .column2 .panel {
+  color: #595959;
+  padding: 0.5em 0 0 0;
+  display: none;
+  background-color: white;
+  overflow: hidden;
+  -moz-box-shadow: none;
+  -goog-ms-box-shadow: none;
+  -webkit-box-shadow: none;
+  box-shadow: none;
+}
+.page-description-one-col-accordion .column2 .panel p {
+  font-size: 1em;
+  line-height: 1.6em;
 }
 
 /*# sourceMappingURL=style.css.map */
